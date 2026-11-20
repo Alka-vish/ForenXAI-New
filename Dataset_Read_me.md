@@ -225,48 +225,69 @@ The dataset is intended for academic and experimental research in:
 
 ## 9. Rights, Licensing, and Attribution
 
-ForenXAI contains images originating from multiple datasets and repositories. Therefore, individual images may be subject to different copyright holders, licences, and reuse conditions.
-
-**There is no single licence that automatically applies to every image in the dataset.**
+ForenXAI incorporates images from multiple external sources. Copyright ownership and licensing conditions may differ between individual images. Therefore, no single licence should be assumed to apply to the entire dataset.
 
 ### 9.1 Wikimedia Commons
 
-Wikimedia Commons images may be distributed under different licences, including Creative Commons licences and public-domain designations.
+Wikimedia Commons contains images released under different Creative Commons licences and public-domain designations.
 
-Users should check the original file page and the corresponding image-level metadata to determine the applicable licence and attribution requirements.
+- **Source:** https://commons.wikimedia.org/
+- **Licensing information:** https://commons.wikimedia.org/wiki/Commons:Licensing
+- **Reuse guidelines:** https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia
 
-Reference: https://commons.wikimedia.org/
+Each image must be checked individually for its original licence, creator, attribution requirements, and source file page.
 
 ### 9.2 Smithsonian Open Access
 
-Smithsonian Open Access provides designated public-domain images under CC0.
+Smithsonian Open Access makes designated digital collection assets available under Creative Commons Zero (CC0).
 
-However, users should verify the Open Access status and rights information of each individual item before reuse.
+- **Source:** https://www.si.edu/openaccess
+- **Official licensing information:** https://www.si.edu/openaccess/faq
+- **CC0 1.0 Universal:** https://creativecommons.org/publicdomain/zero/1.0/
 
-Reference: https://www.si.edu/openaccess
+Only images explicitly designated as CC0 should be treated as Smithsonian Open Access assets available under CC0. Other items may have different usage conditions.
 
-CC0 reference: https://creativecommons.org/publicdomain/zero/1.0/
+### 9.3 Flickr-Faces-HQ (FFHQ)
 
-### 9.3 FFHQ
+The Fake class uses facial images derived from the Flickr-Faces-HQ (FFHQ) dataset.
 
-The FFHQ dataset is associated with the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence.
+- **Dataset repository:** https://github.com/NVlabs/ffhq-dataset
+- **Dataset licence (CC BY-NC-SA 4.0):** https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-Reference: https://creativecommons.org/licenses/by-nc-sa/4.0/
+The FFHQ documentation specifies that its individual source photographs were originally published under different licences:
 
-FFHQ-derived manipulated images must be distributed in accordance with the applicable source licensing conditions and any relevant rights in the original photographs.
+| Original image licence | Licence URL |
+|---|---|
+| Creative Commons Attribution 2.0 (CC BY 2.0) | https://creativecommons.org/licenses/by/2.0/ |
+| Creative Commons Attribution-NonCommercial 2.0 (CC BY-NC 2.0) | https://creativecommons.org/licenses/by-nc/2.0/ |
+| Public Domain Mark 1.0 | https://creativecommons.org/publicdomain/mark/1.0/ |
+| Creative Commons Zero 1.0 (CC0 1.0) | https://creativecommons.org/publicdomain/zero/1.0/ |
+| U.S. Government Works | https://www.usa.gov/copyright |
 
-### 9.4 Attribution Requirements
+The FFHQ dataset documentation, including its metadata, download script, and documentation, is separately released under CC BY-NC-SA 4.0 by NVIDIA.
 
-Users should:
+The original image licence and creator information should be checked using the FFHQ metadata. The dataset-level licence should not be assumed to replace the licences of individual photographs.
 
-- Preserve the original creator and source information.
-- Provide appropriate attribution wherever required.
-- Include links to the applicable licences.
-- Indicate modifications where required.
-- Respect non-commercial and ShareAlike restrictions where applicable.
-- Consult image-level metadata before reusing or redistributing images.
+### 9.4 AI-Manipulated Images
 
-**Important:** Public availability of this dataset does not mean that every image is unrestricted for commercial use or redistribution. Users are responsible for checking the licensing conditions applicable to individual images.
+The AI-manipulated images are derived from FFHQ source photographs using Stable Diffusion-based image manipulation.
+
+The original source-image references and available generation information should be preserved.
+
+The licensing conditions applicable to each original image must be considered when determining whether its manipulated derivative can be redistributed. Modifications do not automatically eliminate the original image's copyright or licensing restrictions.
+
+### 9.5 Attribution and Reuse Requirements
+
+Users accessing or reusing ForenXAI should:
+
+- Preserve original creator and source information wherever available.
+- Consult the image-level licence recorded in `metadata.json`.
+- Provide appropriate attribution and licence links where required.
+- Indicate modifications to source images where required.
+- Respect NonCommercial and ShareAlike conditions where applicable.
+- Verify third-party rights and restrictions before redistribution or commercial use.
+
+**Important:** ForenXAI is a publicly accessible research dataset with mixed source-level licensing. Public access does not imply unrestricted commercial use or redistribution rights for every image.
 
 ## 10. Research and Usage Considerations
 
