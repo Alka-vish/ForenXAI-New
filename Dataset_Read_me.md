@@ -345,6 +345,63 @@ ForenXAI is an independently developed research dataset and is not affiliated wi
 | Primary Research Domain | AI-Based Image Detection and Digital Image Forensics |
 | Intended Usage | Academic and Research Purposes |
 
+## 13. Data Quality, Limitations and Known Issues
+
+ForenXAI has been curated from multiple image sources and includes both authentic and AI-manipulated facial images. Although the dataset includes image-level metadata and source information wherever available, users should consider the following quality limitations when using the dataset.
+
+### 13.1 Image Quality Variations
+
+- Images may vary in resolution, dimensions, sharpness, lighting, colour balance, and compression levels.
+- Differences in image quality may influence the performance of image classification and forensic analysis models.
+
+### 13.2 Source and Metadata Limitations
+
+- Metadata completeness depends on the information provided by the original source platforms.
+- Some images may have incomplete descriptions, creator information, original publication dates, or attribution details.
+- Source URLs and available licence information are retained wherever available.
+
+### 13.3 AI-Manipulation Variations
+
+- AI-manipulated images may contain different levels of visual artefacts and inconsistencies.
+- Manipulation characteristics may vary depending on the source image, generation model, and processing parameters.
+- Not every manipulated image necessarily contains obvious visual artefacts.
+
+### 13.4 Dataset Size and Class Distribution
+
+The current dataset contains 1,465 images:
+
+| Category | Number of Images |
+|---|---:|
+| Real | 788 |
+| Fake (AI-Manipulated) | 677 |
+| **Total** | **1,465** |
+
+The dataset size and class distribution may limit its representativeness of real-world facial imagery and manipulation techniques.
+
+### 13.5 Potential Duplicates and Similarities
+
+- Images may contain visually similar subjects or compositions because they originate from different source collections.
+- Duplicate detection and manual verification should be considered when preparing experimental datasets.
+- Users should check for data leakage when creating training, validation, and testing splits, particularly where manipulated images are derived from source photographs.
+
+### 13.6 Labelling and Verification
+
+- Images are categorised as `Real` or `Fake` according to their documented source and dataset preparation process.
+- Users should independently verify labels and metadata before using the dataset in high-stakes applications.
+- The dataset should not be treated as a guarantee that an image is authentic or manipulated.
+
+### 13.7 Recommended Usage
+
+For reliable experimentation, users are encouraged to:
+
+- Perform image integrity and duplicate checks.
+- Validate metadata and source attribution.
+- Apply consistent preprocessing.
+- Use subject-independent or source-aware train/test splits where possible.
+- Report dataset limitations when publishing experimental results.
+
+**Disclaimer:** ForenXAI is intended for research and educational purposes. Its contents may contain source-specific limitations, metadata gaps, and variations in image quality. Users should independently assess data suitability for their intended applications.
+
 ---
 
 **ForenXAI Research Team**
